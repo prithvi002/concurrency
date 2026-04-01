@@ -1,0 +1,9 @@
+“Implement a thread-safe blocking stack.
+
+It should support push() and pop().
+
+push() should block if the stack is full.
+
+pop() should block if the stack is empty.
+
+Use synchronized and wait/notify only.”

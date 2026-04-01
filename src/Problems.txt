@@ -1,0 +1,157 @@
+Perfect, Captain — here’s the **full list of systems-programming concurrency interview problems** you must master.
+These match exactly what top companies (LinkedIn, Microsoft, Databricks, AWS) ask.
+
+Copy-paste this into VS Code.
+
+---
+
+# ✅ **PROBLEMS LIST — System Programming + Concurrency**
+
+### **1. Bounded Blocking Queue** (DONE ✔)
+
+* Multiple producers
+* Multiple consumers
+* wait/notify
+* shutdown
+* interrupt
+* fairness discussion
+
+---
+
+### **2. ThreadPool (Fixed Worker Pool)**
+
+* Implement a pool of worker threads
+* A job queue
+* submit() adds tasks
+* workers keep taking tasks
+* graceful shutdown()
+* shutdownNow() (forced stop)
+
+---
+
+### **3. Rate Limiter (Single Machine, Multithreaded)**
+
+Three versions:
+
+* Fixed window counter
+* Sliding window
+* Token bucket
+* Multiple threads calling `allowRequest()` concurrently
+
+---
+
+### **4. Producer–Consumer with Condition Variables**
+
+* Using ReentrantLock
+* Using Condition `notEmpty`, `notFull`
+* More fair than synchronized/wait
+
+---
+
+### **5. Read–Write Lock (Custom Implementation)**
+
+* Multiple readers allowed simultaneously
+* Writer gets exclusive lock
+* Writers should not starve
+* Readers should not starve
+
+---
+
+### **6. Blocking Stack**
+
+* Like queue but LIFO
+* Thread-safe
+* push() / pop()
+* must block when empty/full
+* implemented using wait/notify
+
+---
+
+### **7. Custom Semaphore**
+
+* Implement acquire() / release()
+* Block when permits = 0
+* No java.util.Semaphore allowed
+
+---
+
+### **8. Custom CountdownLatch**
+
+* Implement await()
+* Implement countDown()
+* Thread waits until count hits zero
+* No java.util.concurrent classes allowed
+
+---
+
+### **9. Custom CyclicBarrier**
+
+* N threads wait until all reach a point
+* Then all proceed together
+* Reusable
+* Must use wait/notify
+
+---
+
+### **10. Future / Promise Simulation**
+
+* A worker thread does some work
+* A main thread waits for result
+* Implement:
+
+  * `setResult()`
+  * `get()` (blocks until result is ready)
+
+---
+
+### **11. Pipeline Pattern (3 stages, each with its own thread)**
+
+* Stage 1: read
+* Stage 2: transform
+* Stage 3: write
+* Queues between stages
+* Backpressure handling
+
+---
+
+### **12. Thread-safe Cache (with TTL)**
+
+* get(key)
+* put(key, value, ttl)
+* Expired entries cleaned by cleaner thread
+* Must use synchronized or locks
+
+---
+
+### **13. Implement a Custom Blocking FIFO Buffer**
+
+* fixed capacity
+* write blocks on full
+* read blocks on empty
+* similar to channels in Go
+
+---
+
+### **14. Multi-threaded File Downloader**
+
+* Split file into chunks
+* Each thread downloads a part
+* Write to correct position
+* Handle join, merge, errors
+
+---
+
+### **15. Multi-threaded Logger**
+
+* Single writer thread
+* Multiple log-producing threads
+* Logs stored in a queue
+* Writer writes to disk
+
+---
+
+# ⭐ TOTAL: **15 essential systems-programming interview problems**
+
+These are exactly the kinds of problems LinkedIn, Databricks, Microsoft SRE/Sys Infra ask.
+
+---
