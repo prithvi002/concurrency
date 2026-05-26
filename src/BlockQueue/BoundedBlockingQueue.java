@@ -11,7 +11,7 @@ public class BoundedBlockingQueue<T> {
         this.capacity = cap;
         this.buffer = new LinkedList<>();
     }
-
+    
     public void enqueue(T item) throws InterruptedException {
         synchronized(lock) {
             while (buffer.size() == capacity) {
